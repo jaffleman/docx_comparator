@@ -5,11 +5,9 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.apache.commons.collections4.SetUtils.SetView;
 import org.apache.poi.openxml4j.util.ZipSecureFile;
 import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
@@ -24,7 +22,7 @@ public class Docx {
     private List <Segments> segList = new ArrayList<>();
     private List<String> docSegList = new ArrayList<>();
     static List<String> segListIndex = new ArrayList<>();
-    static Set<String> shortNameListIndex ;
+    static List<String> shortNameListIndex = new ArrayList<>() ;
     public Docx(String docName, String docPath) throws IOException {
         System.out.print(".");
         this.name = docName;
